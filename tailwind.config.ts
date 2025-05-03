@@ -1,6 +1,6 @@
 
 import { defineConfig } from "tailwindcss";
-import tailwindcssAnimate from "tailwindcss-animate";
+import animate from "tailwindcss-animate";
 
 export default defineConfig({
   darkMode: 'class',
@@ -38,7 +38,7 @@ export default defineConfig({
     },
   },
   plugins: [
-    tailwindcssAnimate,
+    animate,
     function({ addUtilities }) {
       addUtilities({
         '.perspective-1000': {
