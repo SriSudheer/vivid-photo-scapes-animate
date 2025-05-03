@@ -35,6 +35,36 @@
 
     --radius: 0.5rem;
   }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 263 84% 66%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 170 78% 40%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+
+    --accent: 264 60% 60%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 263 84% 66%;
+  }
 }
 
 @layer base {
@@ -47,7 +77,11 @@
   }
   
   body {
-    @apply bg-photo-dark text-foreground overflow-x-hidden;
+    @apply bg-photo-dark text-foreground overflow-x-hidden transition-colors duration-300;
+  }
+
+  body.dark {
+    @apply bg-gray-900 text-white;
   }
   
   ::-webkit-scrollbar {
@@ -55,16 +89,15 @@
   }
   
   ::-webkit-scrollbar-track {
-    background: #0F0F0F;
+    @apply bg-photo-dark dark:bg-gray-900;
   }
   
   ::-webkit-scrollbar-thumb {
-    background: #3A3A3A;
-    border-radius: 10px;
+    @apply bg-gray-700 dark:bg-gray-600 rounded-full;
   }
   
   ::-webkit-scrollbar-thumb:hover {
-    background: #8B5CF6;
+    @apply bg-photo-purple dark:bg-purple-500;
   }
 }
 
@@ -78,7 +111,7 @@
   }
   
   .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-photo-purple to-photo-teal;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-photo-purple to-photo-teal dark:from-purple-400 dark:to-teal-300;
   }
   
   .image-wrapper {
@@ -90,10 +123,19 @@
   }
   
   .hover-overlay {
-    @apply absolute inset-0 bg-photo-purple/20 opacity-0 transition-opacity duration-300 flex items-center justify-center;
+    @apply absolute inset-0 bg-photo-purple/20 dark:bg-purple-600/20 opacity-0 transition-opacity duration-300 flex items-center justify-center;
   }
   
   .image-wrapper:hover .hover-overlay {
     @apply opacity-100;
+  }
+
+  /* Dark mode specific styles */
+  .dark .shadow-glow {
+    @apply shadow-[0_0_15px_rgba(139,92,246,0.3)];
+  }
+  
+  .glass-card {
+    @apply bg-white/10 backdrop-blur-md border border-white/20 dark:bg-black/30 dark:border-white/10;
   }
 }

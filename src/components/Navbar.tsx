@@ -2,10 +2,12 @@
 import React, { useState, useEffect } from 'react';
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from 'framer-motion';
+import { Sun, Moon, Facebook, Instagram, MessageCircle } from "lucide-react";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -25,6 +27,12 @@ const Navbar = () => {
     setMobileMenuOpen(!mobileMenuOpen);
   };
 
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
+    // Add actual dark mode implementation later
+    document.documentElement.classList.toggle('dark');
+  };
+
   return (
     <motion.header 
       className={cn(
@@ -40,7 +48,7 @@ const Navbar = () => {
           className="text-2xl md:text-3xl font-bold"
           whileHover={{ scale: 1.05 }}
         >
-          <span className="text-gradient">LensCraft</span>
+          <span className="text-gradient">LuminaLens</span>
         </motion.div>
         
         <nav className="hidden md:flex items-center space-x-8">
@@ -48,7 +56,7 @@ const Navbar = () => {
             <motion.a 
               key={item} 
               href={`#${item.toLowerCase()}`}
-              className="text-gray-300 hover:text-white transition-colors relative py-2"
+              className="text-gray-300 hover:text-white transition-colors relative py-2 group"
               whileHover={{ y: -2 }}
               custom={index}
               initial={{ y: -20, opacity: 0 }}
@@ -65,16 +73,38 @@ const Navbar = () => {
           ))}
         </nav>
         
-        <div className="flex md:hidden">
+        <div className="flex items-center space-x-3">
           <button 
-            className="p-2 text-gray-300 hover:text-white focus:outline-none"
-            aria-label="Toggle menu"
-            onClick={toggleMobileMenu}
+            onClick={toggleDarkMode}
+            className="p-2 text-gray-300 hover:text-white focus:outline-none hidden md:block"
+            aria-label="Toggle dark mode"
           >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={mobileMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"} />
-            </svg>
+            {darkMode ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
           </button>
+          
+          <div className="hidden md:flex space-x-2">
+            <a href="#" className="p-2 text-gray-300 hover:text-white transition-colors">
+              <Facebook className="w-5 h-5" />
+            </a>
+            <a href="#" className="p-2 text-gray-300 hover:text-white transition-colors">
+              <Instagram className="w-5 h-5" />
+            </a>
+            <a href="#" className="p-2 text-gray-300 hover:text-white transition-colors">
+              <MessageCircle className="w-5 h-5" />
+            </a>
+          </div>
+          
+          <div className="flex md:hidden">
+            <button 
+              className="p-2 text-gray-300 hover:text-white focus:outline-none"
+              aria-label="Toggle menu"
+              onClick={toggleMobileMenu}
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={mobileMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"} />
+              </svg>
+            </button>
+          </div>
         </div>
       </div>
 
@@ -103,6 +133,37 @@ const Navbar = () => {
                     {item}
                   </motion.a>
                 ))}
+                
+                <div className="flex items-center justify-between border-t border-gray-700 mt-2 pt-4">
+                  <button
+                    onClick={toggleDarkMode}
+                    className="flex items-center space-x-2 text-gray-300 hover:text-white px-4 py-2"
+                  >
+                    {darkMode ? (
+                      <>
+                        <Sun className="w-5 h-5" />
+                        <span>Light Mode</span>
+                      </>
+                    ) : (
+                      <>
+                        <Moon className="w-5 h-5" />
+                        <span>Dark Mode</span>
+                      </>
+                    )}
+                  </button>
+                  
+                  <div className="flex space-x-3">
+                    <a href="#" className="text-gray-300 hover:text-white transition-colors">
+                      <Facebook className="w-5 h-5" />
+                    </a>
+                    <a href="#" className="text-gray-300 hover:text-white transition-colors">
+                      <Instagram className="w-5 h-5" />
+                    </a>
+                    <a href="#" className="text-gray-300 hover:text-white transition-colors">
+                      <MessageCircle className="w-5 h-5" />
+                    </a>
+                  </div>
+                </div>
               </nav>
             </div>
           </motion.div>
