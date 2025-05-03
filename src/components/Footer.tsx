@@ -74,7 +74,7 @@ const Footer = () => {
           >
             <h4 className="text-lg font-semibold text-white mb-6">Services</h4>
             <ul className="space-y-4">
-              {['Wedding Photography', 'Kids' Birthday Shoots', 'Candid Portraits', 'Family Events', 'Photo Editing'].map((item) => (
+              {['Wedding Photography', 'Kids\' Birthday Shoots', 'Candid Portraits', 'Family Events', 'Photo Editing'].map((item) => (
                 <li key={item}>
                   <a 
                     href="#services" 

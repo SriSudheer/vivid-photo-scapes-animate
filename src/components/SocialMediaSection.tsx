@@ -41,7 +41,7 @@ const samplePosts = [
   },
   {
     platform: 'Instagram',
-    type: 'Kids' Birthday',
+    type: 'Kids\' Birthday',
     caption: 'Little Aarav turned 5 in style! It was all smiles, balloons, and cake at this superhero-themed birthday party. Capturing children's joy is always a highlight of our work! ✨ #KidsPhotography #BirthdayMagic #LuminaLens'
   },
   {
