@@ -47,7 +47,7 @@ const Index = () => {
               <ul className="space-y-4">
                 {[
                   'Professional wedding photography',
-                  'Creative kids' birthday shoots',
+                  'Creative kids\' birthday shoots',
                   'Candid couple & outdoor portraits',
                   'Comprehensive family event coverage'
                 ].map((item, i) => (
@@ -124,7 +124,7 @@ const Index = () => {
                 ),
               },
               {
-                title: 'Kids' Birthday Photography',
+                title: 'Kids\' Birthday Photography',
                 description: 'We specialize in capturing the joy, wonder, and spontaneous moments of childhood during birthday celebrations, creating vibrant and playful memories to treasure.',
                 icon: (
                   <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
