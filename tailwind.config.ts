@@ -35,9 +35,6 @@ export default defineConfig({
           "50%": { transform: "translateY(-10px)" },
         },
       },
-      perspective: {
-        "1000": "1000px",
-      },
     },
   },
   plugins: [

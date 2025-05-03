@@ -8,7 +8,7 @@ const socialProfiles = [
     platform: 'Facebook',
     icon: Facebook,
     handle: '@LuminaLensStudio',
-    bio: 'Capturing life's most precious moments with artistry and emotion. Professional photography for weddings, birthdays, portraits, and family events.',
+    bio: 'Capturing life\'s most precious moments with artistry and emotion. Professional photography for weddings, birthdays, portraits, and family events.',
     color: 'bg-blue-600',
     lightColor: 'bg-blue-500/10',
     url: '#facebook'
@@ -26,7 +26,7 @@ const socialProfiles = [
     platform: 'WhatsApp',
     icon: MessageCircle,
     handle: '+91 XXXXXXXXXX',
-    bio: 'Thank you for contacting LuminaLens Studio! We're excited to help capture your special moments. Please share details about your event, and we'll get back to you within 24 hours.',
+    bio: 'Thank you for contacting LuminaLens Studio! We\'re excited to help capture your special moments. Please share details about your event, and we\'ll get back to you within 24 hours.',
     color: 'bg-green-600',
     lightColor: 'bg-green-500/10',
     url: '#whatsapp'
@@ -37,22 +37,22 @@ const samplePosts = [
   {
     platform: 'Facebook',
     type: 'Wedding',
-    caption: 'Priya and Raj's wedding was a beautiful celebration of love and tradition. Swipe to see some of our favorite moments from their special day! #WeddingPhotography #LuminaLensStudio'
+    caption: 'Priya and Raj\'s wedding was a beautiful celebration of love and tradition. Swipe to see some of our favorite moments from their special day! #WeddingPhotography #LuminaLensStudio'
   },
   {
     platform: 'Instagram',
     type: 'Kids\' Birthday',
-    caption: 'Little Aarav turned 5 in style! It was all smiles, balloons, and cake at this superhero-themed birthday party. Capturing children's joy is always a highlight of our work! ✨ #KidsPhotography #BirthdayMagic #LuminaLens'
+    caption: 'Little Aarav turned 5 in style! It was all smiles, balloons, and cake at this superhero-themed birthday party. Capturing children\'s joy is always a highlight of our work! ✨ #KidsPhotography #BirthdayMagic #LuminaLens'
   },
   {
     platform: 'Instagram',
     type: 'Couple Portrait',
-    caption: 'Behind the scenes from today's sunset couple shoot with Neha and Vikram. The golden hour light was absolutely perfect! 💫 #CouplePhotography #GoldenHour #LuminaLensStudio'
+    caption: 'Behind the scenes from today\'s sunset couple shoot with Neha and Vikram. The golden hour light was absolutely perfect! 💫 #CouplePhotography #GoldenHour #LuminaLensStudio'
   },
   {
     platform: 'WhatsApp',
     type: 'Auto-reply',
-    caption: 'Hello! Thank you for reaching out to LuminaLens Studio. We're currently capturing beautiful moments but will respond to your message as soon as possible (within 24 hours). For immediate booking inquiries, please visit our website at www.luminalens.com'
+    caption: 'Hello! Thank you for reaching out to LuminaLens Studio. We\'re currently capturing beautiful moments but will respond to your message as soon as possible (within 24 hours). For immediate booking inquiries, please visit our website at www.luminalens.com'
   }
 ];
 
